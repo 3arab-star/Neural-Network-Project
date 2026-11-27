@@ -299,4 +299,104 @@ https://doi.org/10.24432/C5K306
 **Result:** EXPECTED PASS — Pending empirical training-time verification.
 
 ---
+# 03. Primary Evaluation Metric
+### Model Evaluation Strategy
 
+> **Selected Primary Metric:** F1-Score  
+> **Classification Type:** Binary Classification  
+> **Positive Class:** `yes` — Client subscribed to a term deposit.
+
+---
+
+## 3.1 Metric Selection
+
+The **F1-Score** is selected as the primary evaluation metric for the Bank Marketing prediction task. It represents the harmonic mean of Precision and Recall, providing a balanced measure of the model's ability to identify potential subscribers while minimizing incorrect positive predictions.
+
+Since the Bank Marketing dataset contains an imbalanced target distribution, Accuracy alone may provide a misleading evaluation of model performance. A classifier could achieve relatively high accuracy by predominantly predicting the majority class (`no`), while failing to identify customers who are actually interested in subscribing.
+
+The F1-Score is therefore more appropriate for evaluating the model's effectiveness in identifying potential subscribers while considering both False Positives and False Negatives.
+
+---
+
+## 3.2 Mathematical Definition
+
+The F1-Score is calculated using Precision and Recall:
+
+$$
+\text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+$$
+
+### Precision
+
+Measures how many customers predicted to subscribe actually subscribed.
+
+$$
+\text{Precision} = \frac{TP}{TP + FP}
+$$
+
+### Recall
+
+Measures how many actual subscribers were successfully identified by the model.
+
+$$
+\text{Recall} = \frac{TP}{TP + FN}
+$$
+
+| Component | Definition |
+|---|---|
+| TP (True Positive) | Correctly predicted subscription. |
+| TN (True Negative) | Correctly predicted non-subscription. |
+| FP (False Positive) | Predicted subscription, but the client did not subscribe. |
+| FN (False Negative) | Predicted non-subscription, but the client actually subscribed. |
+
+---
+
+## 3.3 Why F1-Score Instead of Accuracy?
+
+Accuracy measures the proportion of all predictions that are correct:
+
+$$
+\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+$$
+
+However, in an imbalanced dataset, the majority class can dominate this metric.
+
+For example, if most clients do not subscribe, a model that predicts `no` for nearly every customer may achieve high Accuracy while providing little practical value to the marketing team.
+
+The F1-Score addresses this limitation by considering both Precision and Recall for the positive class. It penalizes models that achieve high Precision but very low Recall, or high Recall but very low Precision.
+
+Consequently, it provides a more meaningful assessment of the model's ability to identify potential subscribers.
+
+---
+
+## 3.4 Business Impact of Prediction Errors
+
+The selected metric reflects the importance of both types of classification errors in the bank's marketing campaign.
+
+| Error Type | Business Consequence | Related Metric |
+|---|---|---|
+| **False Positive (FP)** | Marketing resources are spent contacting customers who do not subscribe, reducing campaign efficiency. | Precision |
+| **False Negative (FN)** | Potential subscribers are overlooked, resulting in missed business opportunities. | Recall |
+
+A high Precision reduces unnecessary marketing efforts, while a high Recall helps identify more potential subscribers.
+
+The F1-Score balances these two objectives, preventing the model from focusing exclusively on one while neglecting the other.
+
+---
+
+## 3.5 Evaluation Strategy
+
+Model performance will be evaluated using the F1-Score as the primary metric, supported by additional metrics to provide a comprehensive assessment.
+
+| Metric | Purpose |
+|---|---|
+| **F1-Score** | Primary metric for balancing Precision and Recall. |
+| Precision | Evaluates the reliability of positive subscription predictions. |
+| Recall | Evaluates the ability to identify actual subscribers. |
+| Accuracy | Provides an overall measure of correct predictions. |
+| ROC-AUC | Measures the model's ability to distinguish between the two classes across different classification thresholds. |
+| Confusion Matrix | Provides a detailed breakdown of TP, TN, FP, and FN. |
+
+The primary metric will be used to compare the Baseline Models and Neural Network architectures, guide hyperparameter tuning, and evaluate the final selected model.
+
+---
