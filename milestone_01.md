@@ -421,3 +421,57 @@ The project responsibilities are distributed among the six team members accordin
 - Each member is responsible for their assigned work package and must provide regular progress updates.
 - Every member must participate in at least one neural network experiment.
 - All team members must understand the overall project workflow and be prepared to explain their contributions during the individual discussion.
+---
+# 07. Final Deliverables & Definition of Done
+
+## 7.1 Week 9 Final Deliverables
+
+Before considering the Week 9 checkpoint complete, the team must deliver the following items:
+
+| # | Deliverable | Description | Status |
+|:---:|---|---|:---:|
+| 01 | Problem Statement | A clearly documented problem definition, including the real-world objective, prediction target, intended users, and business impact. | ☐ |
+| 02 | Dataset Selection & Validation | A selected dataset with its source, license, and validation against the project requirements. | ☐ |
+| 03 | Primary Evaluation Metric | A selected evaluation metric supported by a clear justification related to the business problem and dataset characteristics. | ☐ |
+| 04 | Team Roles & Responsibilities | A documented assignment of responsibilities for every team member. | ☐ |
+| 05 | GitHub Repository | A created and accessible repository prepared for collaborative project development. | ☐ |
+
+---
+
+## 7.2 Definition of Done
+
+The Week 9 checkpoint will be considered complete when all of the following conditions are satisfied:
+
+- [ ] The project problem has been clearly defined and documented.
+- [ ] The dataset has been selected and validated against the project requirements.
+- [ ] The dataset source and license have been documented.
+- [ ] The primary evaluation metric has been selected and justified.
+- [ ] Team roles and responsibilities have been assigned and documented.
+- [ ] The GitHub repository has been created and is accessible to all team members.
+- [ ] All Week 9 deliverables have been reviewed and approved by the team.
+
+### Completion Status
+
+Week 9 Checkpoint: Pending Completion
+
+The checkpoint will be marked as Complete once all deliverables and acceptance conditions have been satisfied.
+
+---
+
+## 7.3 Scope Boundary
+
+Week 9 focuses exclusively on project planning, problem definition, dataset selection, evaluation strategy, team organization, and repository setup.
+
+The following activities are reserved for Week 10 – Data & Baselines:
+
+- Exploratory Data Analysis (EDA).
+- Data Cleaning and Preprocessing.
+- Train, Validation, and Test Splitting.
+- Baseline Model Implementation.
+- Baseline Performance Evaluation.
+
+These activities are outside the scope of the Week 9 checkpoint.
+
+---
+
+> Checkpoint Goal: Establish a clear, validated, and organized project foundation before beginning implementation and experimentation.
