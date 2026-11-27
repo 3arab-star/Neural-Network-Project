@@ -400,3 +400,24 @@ Model performance will be evaluated using the F1-Score as the primary metric, su
 The primary metric will be used to compare the Baseline Models and Neural Network architectures, guide hyperparameter tuning, and evaluate the final selected model.
 
 ---
+## 4. Team Roles & Responsibilities
+
+**Team Size:** 6 Students
+
+The project responsibilities are distributed among the six team members according to the roles specified in the project requirements. Each member owns a specific work package and is responsible for contributing to the overall implementation and documentation.
+
+| Role | Team Member | Responsibilities | Work Package Ownership |
+|---|---|---|---|
+| **1. Tech Lead** | Mohamed | Coordinate the project workflow, define the technical structure, manage GitHub repository organization, review code integration, and ensure that all project components work together. | Project coordination, repository structure, code integration, and technical documentation. |
+| **2. Data Engineer** | Youssef | Collect and validate the Bank Marketing dataset, inspect data quality, handle missing values and duplicates, perform preprocessing, and prepare leakage-free training, validation, and test splits. | Dataset acquisition, data validation, preprocessing, and data pipeline. |
+| **3. Baseline & Analysis Engineer** | Noureldien | Perform Exploratory Data Analysis (EDA), analyze feature distributions and class imbalance, identify relevant patterns, establish trivial and traditional machine learning baselines, and support the selection of the primary evaluation metric. | EDA, statistical analysis, baseline models, and metric analysis. |
+| **4. Model Architect** | Mariam | Design and implement the neural network architectures, develop at least three progressively improved models, calculate the number of trainable parameters, and apply regularization techniques such as Dropout and Early Stopping. | Neural network architecture design, model implementation, and architecture comparison. |
+| **5. Experimentation Engineer** | Menna | Conduct controlled experiments, compare SGD, SGD with Momentum, and Adam optimizers, perform hyperparameter tuning, implement the manual GradientTape training step, and conduct ablation studies. | Training experiments, optimizer comparison, hyperparameter tuning, and ablation studies. |
+| **6. Evaluation & Deployment Engineer** | Anan | Evaluate the final models using the selected metrics, perform error analysis, inspect misclassified samples, compare results across multiple random seeds, and prepare the inference pipeline and project demonstration. | Model evaluation, error analysis, inference pipeline, and final demo. |
+
+### Shared Responsibilities
+
+- Every team member must contribute to the project implementation and documentation.
+- Each member is responsible for their assigned work package and must provide regular progress updates.
+- Every member must participate in at least one neural network experiment.
+- All team members must understand the overall project workflow and be prepared to explain their contributions during the individual discussion.
